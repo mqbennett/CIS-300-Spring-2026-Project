@@ -1,0 +1,335 @@
+/* ---------- Base Reset ---------- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, video { max-width: 100%; height: auto; display: block; }
+
+:root{
+  --text: #120309;
+  --background: #ffffff;
+  --primary: #2E0F15;
+  --secondary: #70163C;
+  --accent: #307351;
+  --muted: #f2f2f2;
+  --panel: #ffffff;
+  --line: #120309;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--muted);
+  color: var(--text);
+}
+
+#wrapper {
+  background: var(--background);
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid var(--line);
+}
+
+
+
+/* ---------- Top Strip ---------- */
+.top-strip {
+  border-bottom: 2px solid var(--line);
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 2px solid var(--line);
+  background: var(--background);
+}
+
+.brand { flex: 0 0 auto; }
+
+.logo {
+  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  background: var(--background)
+}
+
+.logo.large {
+  width: 110px;
+  height: 110px;
+  font-size: 1.1rem;
+}
+
+.logo-svg{
+  width: 100%;
+  height: 100%;
+}
+
+.site-nav { flex: 1; }
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.site-nav a:hover {
+  color: var(--secondary);
+}
+
+.site-nav a.active {
+  text-decoration: underline;
+}
+
+/* ---------- Main / Panels ---------- */
+main { padding: 1rem; }
+
+.hero {
+  border: 2px solid #111;
+  margin: 1rem 0;
+  padding: 1.25rem;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  margin: 0 0 1.25rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  border: 2px solid var(--line);
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  background: var(--background);
+  color: var(--text);
+}
+
+.btn.primary { 
+    background: var(--line); 
+    color: var(--background); 
+    border-color: var(--secondary)
+}
+
+.btn.primary:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn.secondary { 
+    background: var(--background); 
+    color: var(--secondary); 
+    border-color: var(--secondary);
+}
+
+.btn.secondary:hover {
+    background: var(--secondary);
+    color: var(--background);
+}
+
+.btn.small { 
+    font-size: 0.85rem; 
+    padding: 0.55rem 0.9rem; 
+}
+
+.hero, .panel, .card {
+  border: 2px solid var(--line);
+}
+.hero-media .media-placeholder {
+  border: 2px solid #111;
+  background: #e9eef3;
+  height: 260px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Panels */
+.panel {
+  margin: 1rem 0;
+}
+
+.section-title {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px var(--line);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: var(--background);
+  color: var(--primary)  
+}
+
+.panel-body { padding: 1rem; }
+.subtitle { margin-top: 0; font-weight: 700; }
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 2px solid var(--line);
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-img {
+  border: 2px solid var(--line);
+  background: var(--background);
+  height: 90px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* Clients */
+.client-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.client-logo {
+  border: 2px solid #111;
+  background: #e9eef3;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 2px solid #111;
+  padding: 1.25rem 1rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.footer-name {
+  margin: 0.75rem 0 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.footer-links h3,
+.footer-subscribe h3 {
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li { margin: 0.35rem 0; }
+
+.footer-links a {
+  color: #0b4cc2;
+  font-weight: 700;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.subscribe-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.subscribe-form label { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; }
+.subscribe-form input[type="text"],
+.subscribe-form input[type="email"] {
+  border: 2px solid #111;
+  padding: 0.6rem;
+}
+
+.subscribe-form input[type="submit"] {
+  border: 2px solid #111;
+  padding: 0.7rem;
+  font-weight: 800;
+  background: #e9eef3;
+  cursor: pointer;
+}
+
+.video-wrap{
+  border: 2px solid var(--line);
+  background: #e9eef3;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-wrap iframe{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+  .client-row { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr; }
+  .site-nav ul { flex-wrap: wrap; gap: 1rem; }
+}
