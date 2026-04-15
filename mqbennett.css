@@ -597,6 +597,240 @@ a {
   border-color: transparent;
 }
 
+.page-hero {
+    background: linear-gradient(135deg, #70163c, #2e0f15);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.metrics {
+    background: #fbf8f3;
+    padding: 2rem 0;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.metric {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.metric h3 {
+    font-size: 2rem;
+    color: #70163c;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements li {
+    margin-bottom: 0.75rem;
+}
+
+/* TABLE */
+.skills table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.skills th,
+.skills td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.skills th {
+    background: #70163c;
+    color: white;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fbf8f3;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(135deg, #307351, #2e0f15);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #c7a24a;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nonprofit-hero {
+  background: linear-gradient(135deg, #2e0f15, #307351);
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.expertise-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.strategy-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.strategy-copy p:first-child {
+  margin-top: 0;
+}
+
+.strategy-list {
+  padding-left: 1.2rem;
+  margin: 1rem 0 0;
+}
+
+.strategy-list li {
+  margin-bottom: 0.75rem;
+}
+
+.strategy-panel {
+  background: linear-gradient(135deg, rgba(112, 22, 60, 0.98), rgba(46, 15, 21, 0.96));
+  color: #fff8f1;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.strategy-panel h3 {
+  margin-top: 0;
+  color: var(--gold);
+}
+
+.strategy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.strategy-tags span {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.leadership-copy p:first-child {
+  margin-top: 0;
+}
+
+.leadership-points h3 {
+  margin-top: 0;
+}
+
+.leadership-points ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.leadership-points li {
+  margin-bottom: 0.75rem;
+}
+
+.nonprofit-experience-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.cert-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.nonprofit-cta {
+  background: linear-gradient(135deg, #307351, #70163c);
+}
+
+@media (max-width: 1100px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strategy-layout,
+  .leadership-grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nonprofit-experience-grid {
+    grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 1100px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -671,5 +905,8 @@ a {
   .bio-section::after,
   .learn-section::after {
     display: none;
+  }
+  .expertise-grid {
+    grid-template-columns: 1fr;
   }
 }
